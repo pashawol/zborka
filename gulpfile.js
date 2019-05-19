@@ -5,7 +5,8 @@ global.$ = {
 
 	bourbon: require('node-bourbon'),
 	cleanCSS: require('gulp-clean-css'),
-	gulpif: require('gulp-if'), 
+	gulpif: require('gulp-if'),
+	sassGlob: require('gulp-sass-glob'),
 	envDev: false,
 	gp: require('gulp-load-plugins' )(),
 	browserSync: require('browser-sync').create(),

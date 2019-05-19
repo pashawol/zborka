@@ -1,4 +1,5 @@
 module.exports = function (){
+	
 	 // Your "watch" task
 $.gulp.task('watch', function ()  { 
 	$.gulp.watch('sourse/pug/**/*.pug',$.gulp.series('pug')); 

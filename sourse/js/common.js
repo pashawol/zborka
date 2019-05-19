@@ -310,7 +310,7 @@ jQuery(document).ready(function ($) {
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		//
-
+ 
 
 		// скрывает моб меню
 

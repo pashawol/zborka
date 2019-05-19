@@ -88,7 +88,7 @@ JSCCommon = {
 
 	},
 
-
+	// /LazyFunction
 
 	magnificPopupCall: function () {
 		$('.popup-with-move-anim').magnificPopup({
@@ -133,7 +133,7 @@ JSCCommon = {
 		})
 		// /modal галерея
 	},
-
+	// /magnificPopupCall
 	mobileMenu: function () {
 		// закрыть/открыть мобильное меню
 
@@ -175,7 +175,7 @@ JSCCommon = {
 			triggerOnTouchEnd: false,
 		});
 	},
-
+// /mobileMenu
 
 	// табы  . 
 	tabscostume: function (tab) {
@@ -187,7 +187,7 @@ JSCCommon = {
 
 		});
 	},
-
+// /табы  . 
 
 
 
@@ -223,7 +223,7 @@ JSCCommon = {
 
 		});
 	},
-
+	// /nlineSVG
 	CustomInputFile: function CustomInputFile() {
 		var file = $(".add-file input[type=file]");
 		file.change(function () {
@@ -233,7 +233,7 @@ JSCCommon = {
 
 		});
 	},
-
+	// /CustomInputFile
 	CustomYoutubeBlock: function () {
 		$(".pretty-embed__bg").each(function () {
 			// загрузка фона видео
@@ -246,11 +246,12 @@ JSCCommon = {
 		})
 
 	},
-
+	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
 	}
+	// /inputMask
 
 };
 
