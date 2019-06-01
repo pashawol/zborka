@@ -11,11 +11,21 @@ html {
 
 	// background-image: url(../screen/main.jpg);
 }
+.main-wrapper{
+	&::before{
+		// content: url(../screen/main.jpg);
+		// opacity:.7; 
+		top: 0;
+		@include a-cent(x);
+		display: block;
+		pointer-events: none;
+		z-index: 2;
+	} 
+}
 
 body {
 	// opacity: .7;
-	// min-height: 10000px; 
-	background-color: transparent;
+	// min-height: 10000px;  
 }
 
 .mono {

@@ -2,12 +2,12 @@ var btnToggle = $(".toggle-menu-mobile--js")
 menu = $(".menu-mobile--js")
 JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJX
-	LazyFunction: function () {
+		LazyFunction: function () {
 		// Для лэзи загрузки 
 
 		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-			let active = false;
+			var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+			var active = false;
 
 			const lazyLoad = function () {
 				if (active === false) {
@@ -15,10 +15,10 @@ JSCCommon = {
 
 					setTimeout(function () {
 						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight * 2) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+							if ((lazyImage).display !== "none") {
 								lazyImage.src = lazyImage.dataset.src;
 								// lazyImage.srcset = lazyImage.dataset.srcset;
-								lazyImage.classList.remove("lazy").classList.add("lazyloaded");
+								lazyImage.classList.remove("lazy");
 
 								lazyImages = lazyImages.filter(function (image) {
 									return image !== lazyImage;
@@ -47,8 +47,8 @@ JSCCommon = {
 
 		// лэзи 
 		document.addEventListener("DOMContentLoaded", function () {
-			let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
-			let active = false;
+			var lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
+			var active = false;
 
 			const lazyLoad = function () {
 				if (active === false) {
@@ -56,7 +56,7 @@ JSCCommon = {
 
 					setTimeout(function () {
 						lazyImages.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.parentElement.clientHeight) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.parentElement.clientHeight) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+							if ( (lazyImage).display !== "none") {
 								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
 								lazyImage.src = lazyImage.dataset.src;
 								// lazyImage.srcset = lazyImage.dataset.srcset;
@@ -87,6 +87,7 @@ JSCCommon = {
 		});
 
 	},
+
 
 	// /LazyFunction
 

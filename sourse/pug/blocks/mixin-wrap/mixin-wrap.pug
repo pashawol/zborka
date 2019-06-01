@@ -4,11 +4,13 @@ mixin icon(name,mod)
 		use(xlink:href="img/svg/sprite.svg#" + name)
 
 
-mixin breadcrumb(act, ...items)
+
+mixin breadcrumb(...items)
 	nav.breadcrumb
-		each item in items
-			a.breadcrumb-item(href='#')= item 
-		span.breadcrumb-item.active= act
+		-for (var i = 0; i < items.length - 1; i++)
+			a.breadcrumb-item(href='#')= items[i]
+		span.breadcrumb-item.active=  items[items.length - 1]
+
 		
 mixin pugin()
 	nav(aria-label='...')
