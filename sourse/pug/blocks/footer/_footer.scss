@@ -41,13 +41,3 @@
 
 @include media-breakpoint-down(xs) {}
 }
-.lazy-bg,
-img.lazy{
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  transition: filter 400ms, -webkit-filter 400ms;
-  
-}
-.lazyloaded{
-  filter: blur(0);
-}

@@ -329,7 +329,12 @@ textarea {
 	;
 }
 
- 
+ .strong{
+	 font-weight: bold;
+ }
+ ul{
+	 padding-left: 0;
+ }
 .res-i {
 	max-width: 100%;
 	width: auto;
@@ -422,4 +427,15 @@ input::-webkit-inner-spin-button {
 		padding: 0;
 		clip: rect(0 0 0 0 );
 		overflow: hidden;
+}
+
+.lazy-bg,
+img.lazy{
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
+  
+}
+.lazyloaded{
+  filter: blur(0);
 }
