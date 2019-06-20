@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Галерея</title>
+    <meta name="description" content="о чем страница">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
+    <!-- Custom Browsers Color-->
+    <meta name="theme-color" content="#623377">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/priority-navigation/dist/priority-nav-core.css">
+    <link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="libs/gijgo-combined-1.9.11/css/gijgo.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script><![endif] -->
+  </head>
+  <body>
+    <div class="menu-mobile menu-mobile--js" id="my-menu">
+      <div class="menu-mobile__inner">
+        <div class="menu-mobile__title">меню сайта
+        </div>
+        <ul class="menu-mobile__nav">
+          <li class="menu-mobile__item menu-mobile__item--current"><a class="menu-mobile__link" href="#">Турниры академии</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Семинары и мастер-классы</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Оценка по видео</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Тренировочные программы</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Фан-клуб</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Новости</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">О школе</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Спонсорам</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+          <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Контакты</a>
+            <ul class="sub-nav"><li><a class="sub-nav__link" href="#">Международные турниры</a></li><li><a class="sub-nav__link" href="#">Корпоративные турниры</a></li><li><a class="sub-nav__link" href="#">Выходного дня</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-lg-none">
+          <ul class="menu-mobile__nav">
+            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Академия</a>
+            </li>
+            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Программы</a>
+            </li>
+            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">тренера</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-mobile__foot">
+          <div class="soc"><a class="soc__item soc__item--fb" href="#" target="_blank">
+            <svg class="icon icon-fb ">
+              <use xlink:href="img/svg/sprite.svg#fb"></use>
+            </svg></a><a class="soc__item soc__item--instagram" href="#" target="_blank"><img src="img/instagram-color.svg" alt=""/>
+            <svg class="icon icon-instagram ">
+              <use xlink:href="img/svg/sprite.svg#instagram"></use>
+            </svg></a>
+            <div class="soc__text d-none d-sm-block">— мы в скоциальных сетях
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  мобильное меню-->
+    <div class="main-wrapper">
+      <!-- start HEADER.header-->
+      <header class="header block-with-lazy"> 
+        <!-- start top-nav-->
+        <div class="top-nav block-with-lazy">
+          <div class="container">
+            <div class="row">
+              <div class="col-auto">
+                <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+                  <div class="toggle-menu-mobile__text">МЕНЮ
+                  </div>
+                </div>
+              </div>
+              <div class="top-nav__col-logo col-lg-auto col"><a class="top-nav__logo" href="#"><img src="img/logo.png" alt=""/><span class="top-nav__text d-none d-sm-block"><strong>Национальная академия тенниса Беларуси  </strong><small>40&nbsp;ЛЕТ УСПЕХА</small></span></a>
+              </div>
+              <div class="top-nav__col-nav col d-none d-lg-block">
+                <ul class="top-nav__nav">
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Академия</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Программы</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">тренера</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-auto">
+                <ul class="top-nav__nav top-nav__nav--lang">
+                  <li class="top-nav__item"><a class="top-nav__link top-nav__link--lang-active top-nav__link--lang" href="#">ENG</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link top-nav__link--lang" href="#">RUS</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-auto d-sm-none d-md-block">
+                <div class="soc"><a class="soc__item soc__item--fb" href="#" target="_blank">
+                  <svg class="icon icon-fb ">
+                    <use xlink:href="img/svg/sprite.svg#fb"></use>
+                  </svg></a><a class="soc__item soc__item--instagram" href="#" target="_blank"><img src="img/instagram-color.svg" alt=""/>
+                  <svg class="icon icon-instagram ">
+                    <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                  </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
+      </header>
+      <!-- end HEADER.header-->
+      <div class="page-head container">
+        <h1>Галерея</h1>
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">О школе</a><span class="breadcrumb-item active">Галерея</span>
+        </nav>
+      </div>
+      <!-- start s-content-->
+      <div class="s-content section block-with-lazy pt-0" id="s-content">
+        <div class="container"> 
+          <div class="text-center"> 
+            <p>Предшественником тенниса принято считать французскую игру «жё-де-пом» (фр. jeu de paume, дословно игра ладонью). В отличие от современного тенниса в жё-де-пом играли в закрытых помещениях и ладонью. Позже ладонь сменили перчатки, на смену перчаткам пришли специальные биты, а уже потом появились ракетки. Одним из наиболее известных упоминаний тенниса в средневековой литературе является эпизод в исторической хронике Шекспира «Генрих V», где французский дофин в насмешку присылает молодому английскому королю бочонок теннисных мячей. В теннис играли практически все французские короли, Карл IX называл теннис “ одним из самых благородных, достойных и полезных для здоровья упражнений, которыми могут заниматься принцы, пэры и другие знатные особы”.  </p>
+          </div>
+          <!-- start s-gal-->
+          <div class="s-gal gal"> 
+            <div class="row">
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-1.jpg"><img class="lazy-bg" src="#" data-src="img/gall-1.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Спортокиада посвященная Дню Победы</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-2.jpg"><img class="lazy-bg" src="#" data-src="img/gall-2.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Спортокиада посвященная Дню Победы</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-3.jpg"><img class="lazy-bg" src="#" data-src="img/gall-3.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Спортокиада посвященная Дню Победы</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-4.jpg"><img class="lazy-bg" src="#" data-src="img/gall-4.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Спортокиада посвященная Дню Победы</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-5.jpg"><img class="lazy-bg" src="#" data-src="img/gall-5.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Спортокиада посвященная Дню Победы</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-6.jpg"><img class="lazy-bg" src="#" data-src="img/gall-6.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Спортокиада посвященная Дню Победы</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-1.jpg"><img class="lazy-bg" src="#" data-src="img/gall-1.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Олимпиада в СДЮШ №34</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-2.jpg"><img class="lazy-bg" src="#" data-src="img/gall-2.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Олимпиада в СДЮШ №34</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+              <div class="s-gal__col col-lg-4 col-sm-6"><a class="s-gal__img-wrap img-bg" href="img/gall-3.jpg"><img class="lazy-bg" src="#" data-src="img/gall-3.jpg" alt=""/></a>
+                <div class="h4 strong pt-3">Олимпиада в СДЮШ №34</div>
+              </div>
+              <!-- +e.col.col-lg-4.col-sm-6-->
+            </div>
+            <nav aria-label="...">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"> 
+                    <svg class="icon icon-pug-right ">
+                      <use xlink:href="img/svg/sprite.svg#pug-right"></use>
+                    </svg></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1  </a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link page-link-more" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">11</a></li>
+                <li class="page-item"><a class="page-link" href="#">12</a></li>
+                <li class="page-item"><a class="page-link" href="#">13 </a></li>
+                <li class="page-item"><a class="page-link" href="#"> 
+                    <svg class="icon icon-pug-left ">
+                      <use xlink:href="img/svg/sprite.svg#pug-left"></use>
+                    </svg></a></li>
+              </ul>
+            </nav>
+          </div>
+          <!-- end s-gal-->
+        </div>
+      </div>
+      <!-- end s-content-->
+      <footer class="footer block-with-lazy">
+        <div class="container">
+          <ul class="footer__nav d-none d-lg-flex">
+            <li class="footer__item"><a class="footer__link" href="#">Турниры академии</a>
+            </li>
+            <li class="footer__item"><a class="footer__link" href="#">Оценка по видео</a>
+            </li>
+            <li class="footer__item"><a class="footer__link" href="#">Новости</a>
+            </li>
+            <li class="footer__item"><a class="footer__link" href="#">академия</a>
+            </li>
+            <li class="footer__item"><a class="footer__link" href="#">Спонсорам</a>
+            </li>
+            <li class="footer__item"><a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="footer__row row justify-content-center">
+            <div class="col-xl col-auto">
+              <div class="footer__logo-block">
+                <div class="row">
+                  <div class="col"><img class="res-i lazy" src="#" data-src="img/logo.png" alt=""/></div>
+                  <div class="col-auto">©2019 Национальная академия тенниса РБ<br/>ВСЕ ПРАВА ЗАЩИЩЕНЫ
+                    <div class="row">
+                      <div class="col-left col-auto"><a class="text-body tdu" href="#">Войти на сайт</a></div>
+                      <div class="col-auto"><a class="text-body tdu" href="#">Документы</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="soc"><a class="soc__item soc__item--fb" href="#" target="_blank">
+                <svg class="icon icon-fb ">
+                  <use xlink:href="img/svg/sprite.svg#fb"></use>
+                </svg></a><a class="soc__item soc__item--instagram" href="#" target="_blank"><img src="img/instagram-color.svg" alt=""/>
+                <svg class="icon icon-instagram ">
+                  <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                </svg></a>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="footer__patner row">
+                <div class="col-auto"><a href="#"><img class="lazy" src="#" data-src="img/footer-patner-1.svg" alt=""/></a></div>
+                <div class="col-auto"><a href="#"><img class="lazy" src="#" data-src="img/footer-patner-2.svg" alt=""/></a></div>
+                <div class="col-auto">—   наши партнеры</div>
+              </div>
+            </div>
+            <div class="text-center col-auto"> <a class="footer__develop" href="#">
+              Разработка сайта    <img class="lazy" src="#" data-src="img/farba-logo.svg" alt=""/>Farba Studio</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+      <form>
+        <div class="text-center">
+          <div class="form-wrap__title h3 ttu">Обратный звонок
+          </div>
+          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+        </div>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
+        </div>
+        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
+        <div class="form-wrap__polite">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">
+            Я даю <a class="tdu" href="#">согласие на обработку персональных данных</a></small>
+          </label>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call-->
+    <!-- modal-->
+    <script src="js/jquery.min.js"></script>
+    <!-- modal libs-->
+    <script src="libs/magnificPopup/jquery.magnific-popup.min.js"> </script>
+    <!-- modal libs-->
+    <!-- slider libs -->
+    <script src="libs/slick/slick.min.js"></script>
+    <!-- /slider libs-->
+    <!-- for svg libs-->
+    <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/priority-navigation/dist/priority-nav.js"></script>
+    <script src="libs/gijgo-combined-1.9.11/js/gijgo.min.js"></script>
+    <script src="libs/gijgo-combined-1.9.11/js/messages/messages.ru-ru.min.js"></script>
+    <!-- /for svg libs-->
+    <script src="libs/jquery.touchSwipe.min.js"></script>
+    <script src="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="libs/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

@@ -2,17 +2,20 @@ mixin form-head()
 	form.js-form-validate( data-parsley-validate="") 
 		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 		block
-mixin input(p ,  t , pl)
+mixin input( t , pl)
 	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= p
-			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
+		+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
-mixin ta(p , pl)
+mixin select( t )
 	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= p
-			+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
+		+e.SELECT.input.form-control
+			option.d-none(disabled selected)= t
+			block
+	// +e.input-wrap
+
+mixin ta( pl)
+	+e.input-wrap.form-group
+		+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
 	// +e.input-wrap
 
 mixin form-wrap()
@@ -36,15 +39,15 @@ mixin in-ch()
 		+e.SPAN.lab
 		block 
 mixin add-file(n)
-	+b.add-file
-		label
-			+e.INPUT.input(name='file', type='file')
-			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
-		+e.SPAN.filename 
+	+e.input-wrap.form-group
+		+b.LABEL.add-file.form-control
+			+e.INPUT.input(name='file', type='file') 
+			+e.SPAN.filename МЕДИЦИНСКАЯ СПРАВКА
 
 
 mixin polite()
 	+e.polite
 		+in-ch('checked')(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.SMALL.text Я даю 
+				|
+				a.tdu(href="#") согласие на обработку персональных данных

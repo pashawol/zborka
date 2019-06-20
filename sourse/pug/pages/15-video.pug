@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-treners/_s-treners.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-gal/_s-gal.pug
+
+block title
+	title Оценка по видео
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1 Оценка по видео
+		+breadcrumb("Главная","О школе","Оценка по видео") 
+	+s-content2()
+		.text-center 
+			p Теннисный матч состоит из «сетов», а они в свою очередь из «геймов», для выигрыша которых необходимо забивать мячи (минимум 4 мяча: 15-30-40-гейм, но с разницей не менее, чем два мяча). При подаче у игрока есть две попытки, в которые он попеременно подает мяч в левый и правый квадраты. После розыгрыша гейма подача переходит к сопернику.
+
+			p После розыгрыша нечётного числа геймов игрокам даётся минутный перерыв и производится смена сторон. Игрок, первым выигравший 6 геймов (при условии, что его соперник выиграл не более 4 геймов), считается выигравшим сет. Для выигрыша матча необходимо выиграть 2 из 3 либо 3 из 5 сетов. Набравший необходимое количество выигранных сетов, выигрывает матч.  
+			+s-contact-15()
+			.section
+				.row 
+					.col-lg-6
+						.strong.h4.text-left.pb-2 Ваши видео
+						.video-block
+							<iframe  src="https://www.youtube-nocookie.com/embed/en6gms6e54Q?controls=0"   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+					.col-lg-6
+						.strong.h4.text-left.pb-2 Видео нашего разбора
+						.video-block
+							<iframe  src="https://www.youtube-nocookie.com/embed/en6gms6e54Q?controls=0"   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					
+		+s-banner
+	+footer()
+

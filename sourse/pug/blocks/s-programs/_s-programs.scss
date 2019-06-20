@@ -1,0 +1,147 @@
+.s-programs {
+		 padding-top: rem(20);
+	&__img-wrap{
+		@include media-breakpoint-up(md) {
+			
+			// min-height: 1px;
+		}
+		
+		// min-height: 200px;
+		@include block(576,300);
+		&--page{
+			@include media-breakpoint-up(xl) {
+				margin-left: rem(10);
+			}
+			@include media-breakpoint-up(md) {
+			padding-bottom: (284/414 * 100%);
+	
+			}
+		}
+		display: block;
+		text-align: center;
+		text-decoration: none !important;
+		
+		opacity: 1;
+		z-index: 2;
+		@extend .block-animate;
+	}
+	&__item{
+		height: 100%;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		@include mt;
+		&:hover{
+			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+		}
+	}
+	&__caption{ 
+		@include media-breakpoint-up(md) {
+			
+			padding: rem(25) rem(36); 
+		}
+		padding: rem(30) rem(15) rem(30);
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		&--page{
+			@include media-breakpoint-up(md) {
+				padding: 0;
+			}
+			// padding: 0;
+		}
+	}
+
+	&__slide{
+		padding: 0 10px 20px;
+	}
+
+	
+	.slick-arrow{
+ 
+					top: rem(-22);
+		transform: translate(0);
+		svg{
+
+			@include media-breakpoint-up(lg) {
+
+				width: rem(88);
+				height: rem(21);
+			}
+			@include media-breakpoint-up(sm) {
+
+				width: rem(88 * .7);
+				height: rem(21 * .7);
+			}
+			width: rem(88 * .3);
+				height: rem(21 * .3);
+		}
+		&.r{
+			right: 20px;
+		}
+		&.l{
+			left: 20px;
+		}
+	}
+
+
+	&__label{
+		position: absolute;
+		left: rem(25);
+		top: rem(25);
+		text-align: center;
+		min-width: rem(125);
+		text-align: center;
+		height: rem(27);
+		padding-left: rem(20);
+		padding-right: rem(20);
+		border-radius: 500px;
+		background-color: $primary;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+				color: #ffffff !important;
+				font-size: rem(10px);
+		font-weight: 700;
+		letter-spacing: rem(1px);
+		text-transform: uppercase;
+	}
+	&__slider{
+		margin-left: -20px;
+		margin-right: -20px;
+		padding: 10px;
+	}
+
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		@include media-breakpoint-up(lg) {
+
+			width: rem(281);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

@@ -200,6 +200,8 @@ parts/
 var/
 sdist/
 develop-eggs/
+izo/
+screen/
 .installed.cfg
 package-lock.json
 

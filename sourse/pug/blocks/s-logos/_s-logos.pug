@@ -1,0 +1,21 @@
+mixin s-logos()
+	// start s-logos
+	+b.SECTION.s-logos.section#s-logos&attributes(attributes)
+		+e.inner.bg-white
+			.container
+				.row
+					.col.order-lg-last
+						.section-title
+							h2 ХОТИТЕ СТАТЬ СПОНСОРОМ?
+							+e.btn(href="#") ОСТАВИТЬ ЗАЯВКУ
+					.col-xl-9.col-lg-8
+						+e.slider--js
+							- for (var x = 1; x < 6; x++)
+								+e.slide
+									img.res-i(src="#" data-lazy=`img/logo-${x}.jpg`, alt="")
+							
+							- for (var x = 1; x < 6; x++)
+								+e.slide
+									img.res-i(src="#" data-lazy=`img/logo-${x}.jpg`, alt="")
+
+	// end s-logos

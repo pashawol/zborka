@@ -1,0 +1,21 @@
+mixin s-our-directions()
+	// start s-our-directions
+	+b.SECTION.s-our-directions.section.block-with-lazy&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 НАШИ НАПРАВЛЕНИЯ 
+			+e.slider--js
+				mixin item(i,t)
+					+e.slide
+						+e.item.img-bg(href="#")
+							img.lazy-bg(src="#" data-src=`img/directions-${i}.jpg`, alt="")
+							+e.title= t
+							+e.btn.btn-primary() Присоединяйся 
+				+item('1','ТРЕНИРОВОЧНЫЕ ПРОГРАММЫ')
+				+item('2','тренера')
+				+item('3','ТУРНИРЫ ')
+				+item('4','СЕМИНАРЫ И МАСТЕР-КЛАССЫ')
+				+item('3','ТУРНИРЫ ')
+				+item('4','СЕМИНАРЫ И МАСТЕР-КЛАССЫ')
+
+	// end s-our-directions

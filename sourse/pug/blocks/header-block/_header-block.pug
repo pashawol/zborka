@@ -1,7 +1,12 @@
 mixin header-block()
 	// start header-block
 	+b.header-block#header-block
-		.container
-			h1 header-block
-			.row
+		+e.slider--js
+			- for (var x = 0; x < 3; x++)
+				+e.slide(style="background-image: url(img/head-sl-1.jpg);")
+					.container
+						+e.title Train where the pros train
+						+e.btn.btn-info(href="#") Начать сейчас
+							+icon('chevron-right')
+							+icon('chevron-right')
 	// end header-block

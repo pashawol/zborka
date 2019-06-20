@@ -1,7 +1,73 @@
 .header-block {
-	display: block;
- 
-	
+	display: block; 
+	margin-bottom: rem(24);
+	&__slide{
+		@include bgs;
+		position: relative;
+		z-index: 2;
+		&::before{
+			content: '';
+			position: absolute;	
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $primary;
+			opacity: 0.5;
+			z-index: -1;
+		}
+	}
+	.container{
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding-top: rem(20);
+		padding-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+
+			height: rem(558);
+		}
+		height: rem(405);
+	}
+
+	&__title{
+		color: #ffffff;
+		@extend .display-1;
+		@extend .mono;
+		text-transform: uppercase;
+		max-width: em(122);
+		text-align: center;
+		line-height: 1.4;
+		margin-bottom: rem(20);
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-lg;
+		width: rem(263);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.icon{
+			font-size: .8em;
+			&:first-child{
+				margin-left: rem(15);
+			}
+		}
+		// width: 263px;
+	}
+
+	.slick-arrow{
+		svg{
+
+			@include media-breakpoint-up(md) {
+
+				width: rem(73);
+				height: rem(214); 
+			}
+		}
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 

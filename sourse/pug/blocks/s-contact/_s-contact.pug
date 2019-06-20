@@ -2,8 +2,239 @@ mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
 			.row
+				.col-lg-6.order-lg-last
+					+e.map-wrap
+						<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A427a8610f82b016a80f54b13f4fd38d8f80ed00055a1b7882dcb55014941d0ab&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+				.col
+					+form-wrap
+						+e.cont-wrap
+							+e.tel
+								+icon('tel')
+							+e.email
+								+icon('email')
+						+e.head
+							+e.title ФОРМА ОБРАТНОЙ СВЯЗИ
+							+e.sub-title  Выберите тему сообщения
+						+input('text','ФИО')
+						+input('tel','ТЕЛЕФОН')
+						+input('email','E-MAIL ')
+						+select('ЧЕМ ИНТЕРЕСУЕТЕСЬ?')
+							option ЧЕМ ИНТЕРЕСУЕТЕСЬ? 1
+							option ЧЕМ ИНТЕРЕСУЕТЕСЬ? 12
+							option ЧЕМ ИНТЕРЕСУЕТЕСЬ? 13
+						+ta('ВАШЕ СООБЩЕНИЕ')
+						+polite
+						+e.btn(type="submit") НАПИСАТЬ СООБЩЕНИЕ
 	// end s-contact
+
+mixin s-contact-05()
+	// start s-contact
+	+b.s-contact--page.block-with-lazy#s-contact&attributes(attributes)
+		.container
+			.row
+				+e.left-col-block.col-lg-6
+					+e.block
+						+e.group
+							+e.group-title Контактная информация
+							+e.row.row
+								+e.col-title.col-5
+									+e.icon-wrap
+										+icon('email')
+									span.d-none.d-sm-block E-mail:
+								.col.strong 
+									a.tdu(href="mailto:TennisRB@mail.by") TennisRB@mail.by
+									br
+									a.tdu(href="mailto:Realtennisrb@mail.by") Realtennisrb@mail.by
+							
+							+e.row.row
+								+e.col-title.col-5
+									+e.icon-wrap
+										+icon('tel')
+									span.d-none.d-sm-block Телефоны:
+
+								.col.strong 
+									a.text-body.tdn(href="tel:8(017)226-93-74") 8 (017) 226-93-74
+									br
+									a.text-body.tdn(href="tel:8(017)226-98-23") 8 (017) 226-98-23
+
+						+e.group
+							+e.group-title Реквизиты
+							+e.row.row
+								.col-sm-5 Наименование организации:
+								.col-sm-7.strong Республиканское общественное объединение &laquo;Белорусская теннисная федерация&raquo; (РОО &laquo;БТФ&raquo;)
+							
+							+e.row.row
+								.col-sm-5 УНП:
+								.col-sm-7.strong 100168790
+							+e.row.row
+								.col-sm-5 ОКПО:
+								.col-sm-7.strong 37437861
+							+e.row.row
+								.col-sm-5 Расчетный счет:
+								.col-sm-7.strong BY73BAPB30152216300100000000 (членские взносы), BY97BAPB31352216300800000000 (спонсорский) в&nbsp;ЦБУ &#8470;&nbsp;701
+							+e.row.row
+								.col-sm-5 Почтовый адрес:
+								.col-sm-7.strong 220030, г. Минск, ул. Герцена, 2А
+							+e.row.row
+								.col-sm-5 Юридический адрес:
+								.col-sm-7.strong г. Минск, ул. Герцена, 2А 
+
+
+				.col
+					+form-wrap(class="s-contact__block")
+						+e.cont-wrap
+							+e.tel
+								+icon('tel')
+							+e.email
+								+icon('email')
+						+e.head
+							+e.title ФОРМА ОБРАТНОЙ СВЯЗИ
+							+e.sub-title  Выберите тему сообщения
+						+input('text','ФИО')
+						+input('tel','ТЕЛЕФОН')
+						+input('email','E-MAIL ')
+						+select('ЧЕМ ИНТЕРЕСУЕТЕСЬ?')
+							option ЧЕМ ИНТЕРЕСУЕТЕСЬ? 1
+							option ЧЕМ ИНТЕРЕСУЕТЕСЬ? 12
+							option ЧЕМ ИНТЕРЕСУЕТЕСЬ? 13
+						+ta('ВАШЕ СООБЩЕНИЕ')
+						+polite
+						+e.btn(type="submit") НАПИСАТЬ СООБЩЕНИЕ
+		+e.map-wrap--page
+			<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A427a8610f82b016a80f54b13f4fd38d8f80ed00055a1b7882dcb55014941d0ab&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+	// end s-contact
+
+mixin s-contact-06()
+	// start s-contact
+	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.container 
+			+form-wrap(class='form-wrap--lg')
+				+e.head
+					+e.title.text-center Хочу стать спонсором
+				.row
+					.col-auto
+						+in-rad('face')
+							+e.STRONG.text.ttu физическо лицо
+					
+					.col-auto
+						+in-rad('face')
+							+e.STRONG.text.ttu Организация
+					
+				.row 
+					.col-md-6
+						+input('text','Название организации или ФИО')
+					.col-md-6
+						+select('Вид спонсорской помощи')
+							option Вид спонсорской помощи 1
+							option Вид спонсорской помощи 12
+							option Вид спонсорской помощи 13
+					.col-md-6
+						+input('tel','ТЕЛЕФОН')
+					.col-md-6
+						+input('text','Мероприятие')
+					.col-md-6
+						+input('email','E-MAIL ')
+					.col-md-6
+						+input('text','Дата')(class="datepicker-date")
+				+ta('ВАШЕ СООБЩЕНИЕ')
+				+polite
+				+e.btn(type="submit") НАПИСАТЬ СООБЩЕНИЕ
+	// end s-contact
+
+
+mixin s-contact-15()
+	// start s-contact
+	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.container 
+			+form-wrap(class='form-wrap--lg')
+				+e.head
+					+e.title.text-center.ttu отправить видео 
+				.row 
+					.col-md-6
+						+input('text',' ФИО')
+					.col-md-6
+						+input('email','E-MAIL ')
+					.col-md-6
+						+input('tel','ТЕЛЕФОН')
+					.col-md-6
+						+input('url','Укажите ссылку на видео') 
+				+ta('ВАШЕ КОММЕНТАРИЙ')
+				+polite
+				+e.btn(type="submit") отправить
+	// end s-contact
+
+mixin s-contact-15-1()
+	// start s-contact
+	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.container 
+			+form-wrap(class='form-wrap--lg')
+				+e.head
+					+e.title.text-center.ttu Информация о стоимости участия
+				+b.thanks-block.text-center 
+					p Теннисный матч состоит из «сетов», а они в свою очередь из «геймов», для выигрыша которых необходимо забивать мячи (минимум 4 мяча: 15-30-40-гейм, но с разницей не менее, чем два мяча). При подаче у игрока есть две попытки, в которые он попеременно подает мяч в левый и правый квадраты. После розыгрыша гейма подача переходит к сопернику. 
+
+					p После розыгрыша нечётного числа геймов игрокам даётся минутный перерыв и производится смена сторон. Игрок, первым выигравший 6 геймов (при условии, что его соперник выиграл не более 4 геймов), считается выигравшим сет. Для выигрыша матча необходимо выиграть 2 из 3 либо 3 из 5 сетов. Набравший необходимое количество выигранных сетов, выигрывает матч.  
+					.row.justify-content-center
+						.col-auto
+							+in-rad('face')
+								+e.STRONG.text.ttu оплатить онлайн
+						
+						.col-auto
+							+in-rad('face')
+								+e.STRONG.text.ttu оплатить через кассу
+					+e.btn-group.pt-0
+						+e.btn.btn-danger2(href="#") Отказаться
+						+e.btn.btn-success(href="#") оплатить
+	// end s-contact
+
+
+mixin s-contact-16()
+	// start s-contact
+	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
+		.container 
+			+form-wrap(class='form-wrap--lg')
+				+e.head
+					+e.title.text-center.ttu Оставить заявку 
+				.row 
+					.col-md-6
+						+input('text',' ФИО')
+						+input('tel','ТЕЛЕФОН') 
+						+input('email','E-MAIL ')
+						+input('text','дата рождения')(class="datepicker-date")
+						.ttu.strong рейтинг
+						.row
+							.col
+								+input('text',' TE')
+							
+							.col
+								+input('text',' ITF')
+							
+							.col
+								+input('text',' WTA')
+							
+							.col
+								+input('text',' ATP')
+							
+							.col
+								+input('text','NAT')
+							
+					.col-md-6
+						+input('url','Укажите ссылку на видео') 
+						.form-group
+							+in-rad('life')
+								+e.SPAN.text С проживанием
+							+in-rad('life')
+								+e.SPAN.text Без проживания 
+						
+						.form-group
+							+in-rad('life2')
+								+e.SPAN.text C сопровождающим
+							+in-rad('life2')
+								+e.SPAN.text Без сопровождающего
+						+ta('ВАШЕ СООБЩЕНИЕ') 
+				+polite
+				+e.btn(type="submit") отправить
+	// end s-contact
+
+

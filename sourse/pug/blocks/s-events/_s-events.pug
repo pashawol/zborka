@@ -1,0 +1,100 @@
+mixin s-events()
+	// start s-events
+	+b.SECTION.s-events.section.block-with-lazy#s-events&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h3 Ближайшие события 
+			.row
+				mixin item(i, t, l)
+					+e.col.col-lg-4.col-md-6&attributes(attributes)
+						+e.item
+							+e.img-wrap.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/event-${i}.jpg`, alt="")
+								+e.label= l
+							+e.caption
+								+e.title
+									a(href="#")= t
+								+e.date 23.03.2019 — 31.03.2019
+								+e.body
+									mixin gr(i,t1,t2)
+										+e.group.row
+											+e.group-title.col
+												+icon(i)
+												=t1
+											.col-auto.strong= t2 
+									+gr("calendar","Окончание регистрации:","16.04.2019")
+									+gr("user","Возрастная категория:","от 19 лет")
+									+gr("money","Взнос:","200 руб.")
+									+gr("tickets","Количество мест:","2 589")
+									+gr("ticket","Свободные места:","600")
+								+e.foot.row
+									.col-auto
+										+e.logo-wrap
+											img.lazy(src="#" data-src=`img/logo-sm-1.png`, alt="")
+									.col-auto
+										+e.logo-wrap
+											img.lazy(src="#" data-src=`img/logo-sm-2.png`, alt="")
+									
+									.col-auto
+										+e.logo-wrap
+											img.lazy(src="#" data-src=`img/logo-sm-3.png`, alt="")
+									
+								+e.btn(href="#") Подробнее
+					// /.col-4
+				+item("1","Название турнира в одну  ",'Скоро')
+				+item("2","Название турнира в одну строку и в две строки",'текущий')
+				+item("2","Название турнира в одну строку и в две строки",'текущий')
+			.text-center
+				a.link-more(href="#") ВСЕ СОБЫТИЯ
+	// end s-events
+
+
+mixin s-events-10-1()
+	// start s-events
+	+b.SECTION.s-events.section.block-with-lazy#s-events&attributes(attributes)
+		.container 
+			.row
+				mixin item(i, t, l)
+					+e.col.col-lg-4.col-md-6&attributes(attributes)
+						+e.item
+							+e.img-wrap.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/event-${i}.jpg`, alt="")
+								+e.label= l
+							+e.caption
+								+e.title
+									a(href="#")= t
+								+e.date 23.03.2019 — 31.03.2019
+								+e.body
+									mixin gr(i,t1,t2)
+										+e.group.row
+											+e.group-title.col
+												+icon(i)
+												=t1
+											.col-auto.strong= t2 
+									+gr("calendar","Окончание регистрации:","16.04.2019")
+									+gr("user","Возрастная категория:","от 19 лет")
+									+gr("money","Взнос:","200 руб.")
+									+gr("tickets","Количество мест:","2 589")
+									+gr("ticket","Свободные места:","600")
+								+e.foot.row
+									.col-auto
+										+e.logo-wrap
+											img.lazy(src="#" data-src=`img/logo-sm-1.png`, alt="")
+									.col-auto
+										+e.logo-wrap
+											img.lazy(src="#" data-src=`img/logo-sm-2.png`, alt="")
+									
+									.col-auto
+										+e.logo-wrap
+											img.lazy(src="#" data-src=`img/logo-sm-3.png`, alt="")
+									
+								+e.btn(href="#") Подробнее
+					// /.col-4
+				- for (var x = 0; x < 2; x++)
+					+item("1","Название турнира в одну  ",'Скоро')
+					+item("2","Название турнира в одну строку и в две строки",'текущий')
+					+item("2","Название турнира в одну строку и в две строки",'текущий')
+			+pugin()
+	// end s-events
+
+

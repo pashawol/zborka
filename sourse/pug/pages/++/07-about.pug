@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-treners/_s-treners.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-gal/_s-gal.pug
+include ../blocks/s-events/_s-events.pug
+
+block title
+	title О нас
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1 О нас
+		+breadcrumb("Главная","О нас") 
+	+s-content2()
+		.text-center 
+			p Прямым предшественником современного тенниса считается игра в помещениях, до конца XIX века носившая то же название, а в настоящее время известная как реал-теннис, корт-теннис или жё-де-пом (фр. jeu de paume, в буквальном переводе игра ладонью). 
+
+			p Вначале в этой игре, как и в ручной пелоте, мяч отбивали рукой, затем появились перчатки, биты и, наконец, в XVI веке, ракетки и сетка. На это же время приходится пик популярности жё-де-пома, в который играли французские, английские и испанские короли того времени.
+			img(src="img/about.jpg", alt="")
+			p 
+				strong Следом за Индиан-Уэллсом на другом побережье Америки, восточном – во Флориде – пройдёт ещё один крупный двухнедельный турнир
+				|
+				| – Miami Open. Соревнование будет разыграно в 35-й раз, причём с самого появления оно проводилось одновременно для мужчин и женщин. В 1985 году турнир прошёл в Делрей-Бич, в следующем сезоне переехал в Бока-Рэйтон, а с 1987-го надолго обосновался в теннисном центре Crandon Park на острове Ки-Бискейне близ Майами. В нынешнем розыгрыше произошёл грандиозный переезд. Турнир разместился на стадионе «Хард-Рок», где проводит домашние матчи команда НФЛ «Майами Долфинс».
+
+
+
+	//- +s-treners
+	+s-category
+	+s-gal
+	+s-news-4
+		h3 ПОСЛЕДНИЕ НОВОСТИ
+		
+	+s-banner
+	+s-events
+	+footer()
+

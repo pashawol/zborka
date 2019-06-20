@@ -1,0 +1,54 @@
+mixin s-category()
+	// start s-category
+	+b.SECTION.s-category.section.block-with-lazy&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h3 СМОТРИТЕ ТАКЖЕ 
+			.row
+				mixin item(i,t, color)
+					+e.col.col-md-6
+						+e.item.img-bg(href='#')
+							img.lazy-bg(src="#" data-src=`img/category-${i}.jpg`, alt="")
+							+e.DIV.title= t
+								.before(style=`background-color: ${color};`)
+					// /+e.col.col-md-6
+				+item('1','О НАС','#5c3674')
+				+item('2','ГАЛЕРЕЯ','#28a8a6')
+				+item('3','ТРЕНЕРЫ','#86b852')
+				+item('4','СПОРТСМЕНЫ','#5c3674')
+	// end s-category
+
+mixin s-category-10()
+	// start s-category
+	+b.SECTION.s-category.section.block-with-lazy
+		.container
+			.row
+				mixin item(i,t)
+					+e.col.col-lg-4.col-md-6
+						+e.item--tourn.img-bg.block-animate(href='#')
+							img.lazy-bg(src="#" data-src=`img/category-tourn-${i}.jpg`, alt="")
+							+e.DIV.title-lg= t
+							+e.btn(type="button") ЧИТАТЬ ПОДРОБНЕЕ
+					// /+e.col.col-md-6
+				+item('1','Международные турниры')
+				+item('2','корпоративные турниры')
+				+item('3','Турниры выходного дня')
+	// end s-category
+
+mixin s-category-13()
+	// start s-category
+	+b.s-category 
+		block
+		.row
+			mixin item(i,t, color)
+				+e.col.col-md-6
+					+e.item.img-bg(href='#')
+						img.lazy-bg(src="#" data-src=`img/category-${i}.jpg`, alt="")
+						+e.DIV.title= t
+							.before(style=`background-color: ${color};`)
+				// /+e.col.col-md-6
+			+item('1','О НАС','#5c3674')
+			+item('2','ГАЛЕРЕЯ','#28a8a6')
+			+item('3','ТРЕНЕРЫ','#86b852')
+			+item('4','СПОРТСМЕНЫ','#5c3674')
+	// end s-category

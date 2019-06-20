@@ -1,16 +1,17 @@
 
 
-@include font-face ("roboto", "../fonts/Roboto-Regular/Roboto-Regular", $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Bold/Roboto-Bold", bold, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Medium/Roboto-Medium", 500, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Black/Roboto-Black", 900, $file-formats: woff2 woff ttf);
+@include font-face (Lato, "../fonts/Lato-Regular/Lato-Regular", $file-formats: woff2 woff ttf);
+@include font-face (Lato, "../fonts/Lato-Bold/Lato-Bold", bold, $file-formats: woff2 woff ttf);
+@include font-face (Lato, "../fonts/Lato-Black/Lato-Black", 900, $file-formats: woff2 woff ttf);
+@include font-face (Scada, "../fonts/Scada-Bold/Scada-Bold", 700, $file-formats: woff2 woff ttf);
+@include font-face (Scada, "../fonts/Scada-Regular/Scada-Regular", 400, $file-formats: woff2 woff ttf);
 
 
-$default-font: "roboto";
+$default-font: Lato;
 
 $def: #373a41;
 $em-base: 16px;
-$small: rem(14);
+$small: rem(13);
  
 // обсалютное центрирование
  
@@ -68,7 +69,7 @@ $small: rem(14);
   background-position: $w $h;
   img{
     position: absolute;
-		// opacity: 0;
+		opacity: 0;
 		width: 1px;
 		height: 1px;
 		margin: -1px;
@@ -87,8 +88,8 @@ $small: rem(14);
   background-position: center center;
   background-image: url($img);
 }
-@mixin mt($s: .36){
-  transition: all #{$s}s ;}
+@mixin mt($s: .2){
+  transition: all #{$s}s linear;}
 @mixin c-white{
   color: #fff;}
 @mixin c-dark{
@@ -166,6 +167,16 @@ $small: rem(14);
   height: 0;
   padding-bottom: ($h/$w *100%);
 }
+@mixin block2($w: 1, $h: 1){
+  position: relative;
+  &::before{
+    content: '';
+    display: block;
+    height: 0;
+    padding-bottom: ($h/$w *100%);
+  }
+}
+
 @mixin round($w){
 	display: -webkit-inline-flex;
 	display: -ms-inline-flex;

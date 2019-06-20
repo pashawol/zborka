@@ -2,7 +2,7 @@ var btnToggle = $(".toggle-menu-mobile--js")
 		menu = $(".menu-mobile--js")
 
 jQuery(document).ready(function ($) {
-
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/2.png);"></div>')
 	// для свг
 	svg4everybody({}); 
 	JSCCommon.magnificPopupCall();
@@ -13,32 +13,9 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.inputMask();
 
-	JSCCommon.inlineSVG();
-
-	JSCCommon.CustomInputFile();
-
-	JSCCommon.CustomYoutubeBlock();
-
-
-
-	
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			} 
-		}; 
-	}); 
-	// / закрыть меню при горизонтальном свайпе
-	// /закрыть/открыть мобильное меню
-
+	JSCCommon.inlineSVG(); 
+	JSCCommon.CustomInputFile(); 
+ 
 	function heightses() {
 
 		var w = $(window).width();
@@ -49,22 +26,8 @@ jQuery(document).ready(function ($) {
 		// скрывает моб меню
 
 		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
-		// конец добавил
-		if (window.matchMedia("(min-width: 992px)").matches) {
-
-			btnToggle.removeClass("on");
-			// $("body").removeClass("fixed");
-			menu.removeClass("active");
-			$("body").removeClass("fixed");
-		}
+		$(" .menu-mobile__title").height(  $('.top-nav').height());
+		$(".header ").height(  $('.top-nav').height());
 	} 
 
 	$(window).resize(function () {
@@ -79,7 +42,7 @@ jQuery(document).ready(function ($) {
 	heightses();
  
 	// листалка по стр
-	$(" .top-nav, .scroll-link").click(function () {
+	$("  .scroll-link").click(function () {
 	       var elementClick = $(this).attr("href");
 	       var destination = $(elementClick).offset().top;
 
@@ -87,133 +50,297 @@ jQuery(document).ready(function ($) {
 
 	       return false;
 	   }); 
-
-	// var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-	// var arrl2 = (' <div class="r">' + icon),
-	// 	arrr2 = (' <div class="l">' + icon);
-	// // карусель
-	// $('.s-team__slider').slick({
-	// 	slidesToShow: 3,
-	// 	slidesToScroll: 1,
-	// 	dots: false,
-	// 	speed: 900,
-	// 	infinite: true,
-	// 	loop: true,
-	// 	arrows: true,
-	// 	mobileFirst: true,
-	// 	// centerMode: true,
-	// 	// focusOnSelect: true ,
-	// 	// variableWidth: true,
-	// 	prevArrow: arrr2,
-	// 	nextArrow: arrl2,
-	// });
-
-	$('.s-gal__slider\
-	,.slider-for2 ')
-		.on('lazyLoaded', function (event, slick, image, imageSource) {
-			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-		});
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-
-	// });
-	// modal window
-
-
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
  
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
+ 	var icon = '<svg width="32" height="122" viewBox="0 0 32 122" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 0.646484L31.2167 60.2786L1 121.128" stroke="#D1D1D1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/> </svg>';
+ 	var icon2 = '<svg width="89" height="22" viewBox="0 0 89 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M79.0918 21.2302C78.7441 21.5717 78.0488 21.5717 77.5273 21.2302C77.1797 20.8888 77.1797 20.2058 77.5273 19.6937L85.3496 12.0107L1.04297 12.0107C0.521485 12.1815 8.58236e-07 11.6693 9.03013e-07 11.1571C9.47791e-07 10.6449 0.521485 10.1327 1.04297 10.1327L85.3496 10.1327L77.5273 2.44975C77.1797 2.10829 77.1797 1.42536 77.5273 0.913167C77.875 0.571704 78.5703 0.571704 79.0918 0.913167L88.6523 10.3034C89 10.6449 89 11.3278 88.6523 11.84L79.0918 21.2302Z" fill="#1E201D" fill-opacity="0.3"/>';
+
+	
+
+	var arrl2 = (' <div class="r">' + icon),
+		arrr2 = (' <div class="l">' + icon);
+	// карусель
+	var arrl3 = (' <div class="r">' + icon2),
+		arrr3 = (' <div class="l">' + icon2);
+	// карусель
+	
+	$('.header-block__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+	});
+	$('.s-logos__slider--js').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1, 
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		mobileFirst: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		// the magic
+		responsive: [ 
+			 {
+
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 5, 
+      }
+
+		},
+		
+			 {
+
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4, 
+      }
+
+		},
+		
+			 {
+
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3, 
+      }
+
+		},
 
 
+	 ]
+	});
+
+	
+	$('.s-gal__slider--js').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1, 
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		mobileFirst: true, 
+		prevArrow: arrr3,
+		nextArrow: arrl3,
+		// the magic
+		responsive: [ 
+ 
+			 {
+
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3, 
+      }
+
+		}, 
+	 ]
+	});
+	
+	$('.s-gal__slider--js').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1, 
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		mobileFirst: true, 
+		prevArrow: arrr3,
+		nextArrow: arrl3,
+		// the magic
+		responsive: [ 
+ 
+			 {
+
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 3, 
+      }
+
+		}, 
+	 ]
+	});
+	
+	$('.s-treners__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1, 
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		mobileFirst: true, 
+		prevArrow: arrr3,
+		nextArrow: arrl3,
+		// the magic
+		responsive: [ 
+ 
+			 {
+
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3, 
+      }
+
+		}, 
+		
+			 {
+
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 2, 
+      }
+
+		}, 
+
+	 ]
+	});
 
 
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
+	
+	$(' .s-our-directions__slider--js').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		rows: 2,
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		prevArrow: arrr3,
+		nextArrow: arrl3,
+		// the magic
+		responsive: [  {
 
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
+      breakpoint: 575.99,
+      settings: {
+        slidesToShow: 1, 
+      }
 
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
+    } ]
+	});
+	
+	$(' .s-programs__slider--js').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1, 
+		dots: false,
+		speed: 500, 
+		loop: true,
+		arrows: true, 
+		prevArrow: arrr3,
+		nextArrow: arrl3,
+		// the magic
+		responsive: [  {
 
-	// });
-	// });
+      breakpoint: 767.99,
+      settings: {
+        slidesToShow: 1, 
+      }
+
+    } ]
+	});
+
+	
+
+
+	$(window).on("load", function () {
+		// cкрывает меню в dropdown
+		var wrapper = document.querySelector(".section-nav__body--js");
+		if(wrapper) {
+
+			var nav = priorityNav.init({
+				mainNavWrapper: ".section-nav__body--js", // mainnav wrapper selector (must be direct parent from mainNav)
+			mainNav: ".nav-ul", // mainnav selector. (must be inline-block)
+			navDropdownLabel: wrapper.dataset.droptitle,
+			navDropdownClassName: "nav__dropdown", // class used for the dropdown.
+			navDropdownToggleClassName: "nav__dropdown-toggle", // class used for the dropdown toggle.
+			navDropdownBreakpointLabel: "Выбрать", //button label for navDropdownToggle when the breakPoint is reached.
+			breakPoint:                 0, 
+		});
+	}
+		
+		// setTimeout(function(){
+			
+		// 	$(".nav__dropdown").mCustomScrollbar();
+		// 	$(document).on('click', '.nav__dropdown-toggle', function () {
+		// 		// heightses();
+		// 		// $(".nav__dropdown").mCustomScrollbar("update");
+		// 		$(".nav__dropdown").mCustomScrollbar();
+		
+		// 	});
+		// }, 100)
+});
+
+
+var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+
+$('.datepicker-date').each(function () {
+	var th = $(this);
+	th.datepicker({
+		locale: 'ru-ru',
+		uiLibrary: 'bootstrap4',
+		format: 'dd.mm.yyyy',
+		// minDate: today,
+		icons: {
+			rightIcon: '<i class="custon-icon" ><img src="img/calendar.svg"></i>'
+	}
+		// modal: true
+	});
+ 
+})
+
+		// modal галерея
+		$(".gal").each(function () {
+
+			$(this).find("a").magnificPopup({
+				type: 'image',
+				closeOnContentClick: false,
+				closeBtnInside: false,
+				mainClass: 'mfp-with-zoom mfp-img-mobile',
+				tClose: 'Закрыть (Esc)',
+				image: {
+					verticalFit: true,
+					// titleSrc: function(item) {
+					//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+					// }
+
+				},
+				gallery: {
+					enabled: true
+				}
+			});
+		})
+
 
 
 });
 JSCCommon = {
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+
+		});
+	},
+	// /CustomInputFile
 	// часть вызов скриптов здесь, для использования при AJAX
 	// функции для запуска lazy
-	lazyShow: function (lazyLoad) {
-		document.removeEventListener("scroll", lazyLoad);
-		window.removeEventListener("resize", lazyLoad);
-		window.removeEventListener("orientationchange", lazyLoad);
-		window.addEventListener("DOMContentLoaded", lazyLoad);
-	},
-	LazyFunction: function () {
-		// лэзи 
+	LazyFunction: function() {
+		// Для лэзи загрузки 
+
 		document.addEventListener("DOMContentLoaded", function () {
-			var lazyBg = [].slice.call(document.querySelectorAll(".lazy-bg"));
 			var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 			var active = false;
 
-
-			function lazyLoad() {
+			const lazyLoad = function () {
 				if (active === false) {
 					active = true;
-					setTimeout(function () {
 
+					setTimeout(function () {
 						lazyImages.forEach(function (lazyImage) {
 							if (((lazyImage.getBoundingClientRect().top - lazyImage.closest(".block-with-lazy").clientHeight * 2) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.closest(".block-with-lazy").clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
 								lazyImage.src = lazyImage.dataset.src;
@@ -223,31 +350,67 @@ JSCCommon = {
 								lazyImages = lazyImages.filter(function (image) {
 									return image !== lazyImage;
 								});
-								if (lazyImages.length === 0) {
-									JSCCommon.lazyShow(lazyLoad)
-								}
-							}
-						});
-						lazyBg.forEach(function (lazyImage) {
-							if (((lazyImage.getBoundingClientRect().top - lazyImage.closest(".block-with-lazy").clientHeight * 2) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.closest(".block-with-lazy").clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
-								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
-								lazyImage.src = lazyImage.dataset.src;
-								lazyImage.classList.remove("lazy");
-								lazyBg = lazyBg.filter(function (image) {
-									return image !== lazyImage;
-								});
 
-								if (lazyBg.length === 0) {
-									JSCCommon.lazyShow(lazyLoad)
+								if (lazyImages.length === 0) {
+									document.removeEventListener("scroll", lazyLoad);
+									window.removeEventListener("resize", lazyLoad);
+									window.removeEventListener("orientationchange", lazyLoad);
+									window.addEventListener("DOMContentLoaded", lazyLoad);
 								}
 							}
 						});
+
 						active = false;
 					}, 200);
 				}
 			};
 
-			JSCCommon.lazyShow(lazyLoad)
+			document.addEventListener("scroll", lazyLoad);
+			window.addEventListener("resize", lazyLoad);
+			window.addEventListener("orientationchange", lazyLoad);
+			window.addEventListener("DOMContentLoaded", lazyLoad);
+		});
+
+
+		// лэзи 
+		document.addEventListener("DOMContentLoaded", function () {
+			var lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
+			var active = false;
+
+			const lazyLoad = function () {
+				if (active === false) {
+					active = true;
+
+					setTimeout(function () {
+						lazyImages.forEach(function (lazyImage) {
+							if (((lazyImage.getBoundingClientRect().top - lazyImage.closest(".block-with-lazy").clientHeight * 2) <= window.innerHeight && (lazyImage.getBoundingClientRect().bottom + lazyImage.closest(".block-with-lazy").clientHeight * 2) >= 0) && getComputedStyle(lazyImage).display !== "none") {
+								lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
+								lazyImage.src = lazyImage.dataset.src;
+								// lazyImage.srcset = lazyImage.dataset.srcset;
+								lazyImage.classList.remove("lazy");
+
+								lazyImages = lazyImages.filter(function (image) {
+									return image !== lazyImage;
+								});
+
+								if (lazyImages.length === 0) {
+									document.removeEventListener("scroll", lazyLoad);
+									window.removeEventListener("resize", lazyLoad);
+									window.removeEventListener("orientationchange", lazyLoad);
+									window.addEventListener("DOMContentLoaded", lazyLoad);
+								}
+							}
+						});
+
+						active = false;
+					}, 200);
+				}
+			};
+
+			document.addEventListener("scroll", lazyLoad);
+			window.addEventListener("resize", lazyLoad);
+			window.addEventListener("orientationchange", lazyLoad);
+			window.addEventListener("DOMContentLoaded", lazyLoad);
 		});
 
 	},
@@ -275,27 +438,7 @@ JSCCommon = {
 
 		// / modal window
 
-		// modal галерея
-		$(".gal").each(function () {
 
-			$(this).find("a").magnificPopup({
-				type: 'image',
-				closeOnContentClick: false,
-				closeBtnInside: false,
-				mainClass: 'mfp-with-zoom mfp-img-mobile',
-				tClose: 'Закрыть (Esc)',
-				image: {
-					verticalFit: true,
-					// titleSrc: function(item) {
-					//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-					// }
-
-				},
-				gallery: {
-					enabled: true
-				}
-			});
-		})
 		// /modal галерея
 	},
 	// /magnificPopupCall
@@ -309,6 +452,7 @@ JSCCommon = {
 			menu.toggleClass("active");
 			$("body, html").toggleClass("fixed");
 			return false;
+			
 		});
 		// $('.menu-mobile--js ul li a').on('click', function () {
 		// 	$(".menu-mobile--js .toggle-mnu").click();
@@ -339,16 +483,26 @@ JSCCommon = {
 			},
 			triggerOnTouchEnd: false,
 		});
+ 
 	},
 	// /mobileMenu
 
 	// табы  . 
 	tabscostume: function (tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+		$(document).on('click', '.' + tab + '__btn', function (e) {
+
+			e.preventDefault(); 
+		})
+		$(document).on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			// e.preventDefault(); 
+			var link = $(this).attr('href')
+			console.log(link)
+			$(".tabs__nav").find("a").removeClass('active')
 			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+				.addClass('active').parent()
+				.closest('.' + tab).find('.' + tab + '__content' + link)
+				.fadeIn().addClass('active')
+				.siblings().hide().removeClass('active')
 
 		});
 	},
@@ -388,33 +542,11 @@ JSCCommon = {
 
 		});
 	},
-	// /nlineSVG
-	CustomInputFile: function CustomInputFile() {
-		var file = $(".add-file input[type=file]");
-		file.change(function () {
-			var filename = $(this).val().replace(/.*\\/, "");
-			var name = $(".add-file__filename  ");
-			name.text(filename);
-
-		});
-	},
-	// /CustomInputFile
-	CustomYoutubeBlock: function () {
-		$(".pretty-embed__bg").each(function () {
-			// загрузка фона видео
-			$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-			// включение видео при клике по блоку
-			$(this).click(function () {
-				$(this).removeClass("on").next()
-					.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-			})
-		})
-
-	},
+ 
 	// /CustomYoutubeBlock
 	inputMask: function () {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
+		$('input[type="tel"]').attr("pattern", "[+]375[(][0-9]{2}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+375(99)999-99-99");
 	}
 	// /inputMask
 

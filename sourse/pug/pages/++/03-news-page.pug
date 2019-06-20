@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+include ../blocks/s-banner/_s-banner.pug
+
+block title
+	title Новость
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1 След Серены Уильямс. В&nbsp;Майами знают, как потратить 500 млн долларов с&nbsp;толком
+		//- +breadcrumb("Главная","Новости")
+		.s-news__foot.s-news__foot--page.row.row.justify-content-center
+			.col-auto
+				.s-news__date 10 сентября’19
+			.col-auto
+				a.s-news__foot-link(href="#") Мастер-класс
+	+s-content
+	+s-news-3
+		
+	+s-banner
+	+footer()
+

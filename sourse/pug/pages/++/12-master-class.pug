@@ -1,0 +1,32 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug 
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug 
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-treners/_s-treners.pug
+include ../blocks/s-category/_s-category.pug 
+include ../blocks/s-event-head/_s-event-head.pug 
+
+block title
+	title  Название мастер-класса
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1  Название мастер-класса
+		+breadcrumb("Главная","Спорстмены", " Международные турниры","Название мастер-класса ")
+	.container
+		+s-nav(  'Архив ', "Анонсированные", "1995","1996","1997 ","1998","1999 ","2000")(class="section-nav__body--shirt")
+		+s-event-head(" Название мастер-класса ") 
+
+	+s-treners-12
+	+s-news-4
+		h3  НОВОСТИ
+	+s-banner
+	+footer()
+

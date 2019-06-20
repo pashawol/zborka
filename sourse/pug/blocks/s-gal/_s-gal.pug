@@ -1,0 +1,58 @@
+mixin s-gal()
+	// start s-gal
+	+b.SECTION.s-gal.section.block-with-lazy#s-gal&attributes(attributes)
+		.container.gal
+			+b.section-title.text-center
+				h3 фотоГалерея
+			+e.slider--js
+				- for (var x = 1; x < 4; x++)
+					+e.slide
+						+e.img-wrap.img-bg(href=`img/gal-${x}.jpg`)
+							img.lazy-bg(src="#" data-src=`img/gal-${x}.jpg`, alt="")
+					// +e.slide
+				
+				- for (var x = 1; x < 4; x++)
+					+e.slide
+						+e.img-wrap.img-bg(href=`img/gal-${x}.jpg`)
+							img.lazy-bg(src="#" data-src=`img/gal-${x}.jpg`, alt="")
+					// +e.slide
+			.text-center
+				a.link-more(href="#") ВСЕ фотографии
+	// end s-gal
+mixin s-gal-14()
+	// start s-gal
+	+b.s-gal.gal 
+			.row
+				- for (var x = 1; x < 7; x++)
+					+e.col.col-lg-4.col-sm-6
+						+e.img-wrap.img-bg(href=`img/gall-${x}.jpg`)
+							img.lazy-bg(src="#" data-src=`img/gall-${x}.jpg`, alt="")
+						.h4.strong.pt-3 Спортокиада посвященная Дню Победы
+					// +e.col.col-lg-4.col-sm-6
+				
+				- for (var x = 1; x < 4; x++)
+					+e.col.col-lg-4.col-sm-6
+						+e.img-wrap.img-bg(href=`img/gall-${x}.jpg`)
+							img.lazy-bg(src="#" data-src=`img/gall-${x}.jpg`, alt="")
+						.h4.strong.pt-3 Олимпиада в СДЮШ №34
+					// +e.col.col-lg-4.col-sm-6
+			+pugin()
+	// end s-gal
+mixin s-gal-14-1()
+	// start s-gal
+	+b.s-gal.gal 
+			.row
+				- for (var x = 1; x < 7; x++)
+					+e.col.col-lg-4.col-sm-6
+						+e.img-wrap.img-bg(href=`img/gall-${x}.jpg`)
+							img.lazy-bg(src="#" data-src=`img/gall-${x}.jpg`, alt="")
+						 
+					// +e.col.col-lg-4.col-sm-6
+				
+				- for (var x = 1; x < 4; x++)
+					+e.col.col-lg-4.col-sm-6
+						+e.img-wrap.img-bg(href=`img/gall-${x}.jpg`)
+							img.lazy-bg(src="#" data-src=`img/gall-${x}.jpg`, alt="") 
+					// +e.col.col-lg-4.col-sm-6
+			+pugin()
+	// end s-gal

@@ -17,26 +17,27 @@ mixin pugin()
 		ul.pagination.justify-content-center
 			li.page-item.disabled
 				a.page-link(href='#', tabindex='-1') 
-					i(class="fas fa-chevron-left")
-			li.page-item.disabled
-				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
-
-			li.page-item
-				a.page-link(href='#') 1
+					+icon('pug-right')
 			li.page-item.active
 				a.page-link(href='#')
-					| 2 
-					span.sr-only (current)
+					|1  
+			li.page-item
+				a.page-link(href='#') 2
+			li.page-item
+				a.page-link(href='#') 3
 			li.page-item
 				a.page-link.page-link-more(href='#') ...
 			li.page-item
-				a.page-link(href='#') 3
-
+				a.page-link(href='#') 11
+			 
 			li.page-item
-				a.page-link.d-none.d-md-block(href='#') Дальше
+				a.page-link(href='#') 12
+			 
+			li.page-item
+				a.page-link(href='#') 13 
 			li.page-item
 				a.page-link(href='#') 
-					i(class="fas fa-chevron-right")
+					+icon('pug-left')
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
@@ -47,11 +48,38 @@ mixin arrow()
  
 mixin soc()
 	+b.soc
-		mixin item()
-			+e.A.item(href="" target="_blank"): i(class="fab")&attributes(attributes)
-		+item()(class="fa-twitter")
-		+item()(class=" fa-facebook")
-		+item()(class="fa-google-plus")
+		+e.A.item--fb(href="#" target="_blank")
+			+icon('fb')
+		+e.A.item--instagram(href="#" target="_blank")
+			img(src="img/instagram-color.svg", alt="")
+			//- img.img-svg(src="img/instagram.svg", alt="")
+			+icon('instagram')
+		block
+mixin soc2()
+	+b.soc--share
+		.small.text-dark Рассказать друзьям  —
+		+e.A.item--vk.--share(href="#" target="_blank")
+			+icon('vk')
+		+e.A.item--fb.--share(href="#" target="_blank")
+			+icon('fb')
+mixin soc4()
+	+b.soc--share
+		.fw-900.w-100 Поделиться в соц. сетях
+		+e.A.item--vk.--share(href="#" target="_blank")
+			+icon('vk')
+		+e.A.item--fb.--share(href="#" target="_blank")
+			+icon('fb')
+		
+		+e.A.item--instagram.--share(href="#" target="_blank")
+			+icon('instagram')
+
+mixin soc3()
+	+b.soc--share 
+		+e.A.item--vk(href="#" target="_blank")
+			+icon('vk')
+		+e.A.item--fb(href="#" target="_blank")
+			+icon('fb')
+
 //- WP menu
 //- mixin mnu()
 //- 	- var nav= { "Наши работы":"#","Цены":"#","Калькулятор":"#","Акции":"#" ,"Заказать":"#"}
@@ -67,7 +95,26 @@ mixin soc()
 //- 			li.menu-item: a(href="#")= linkName
 
 mixin mnu()
-	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
+	- var nav= {"Академия":"#","Программы":"#","тренера":"#"}
 	+e.UL.nav
 		each linkPatch, linkName in nav
 			+e.LI.item: +e.A.link(href= linkPatch)= linkName
+ 
+mixin s-nav(  drop, act, ...items) 
+	+b.section-nav
+		+e.NAV.body--js(data-droptitle= drop)&attributes(attributes)
+				+e.UL.nav.nav-ul
+					li
+						a.active(href="#")= act
+					each item in items 
+						li
+							a(href="#")= item 
+
+//- mixin tab-nav(  drop, act, ...items) 
+	+b.section-nav
+		+e.body--js(data-droptitle= drop)  
+				+e.UL.nav.tabs__caption
+					li.tabs__btn.active(href="#")= act
+					each item in items 
+						li.tabs__btn= item 
+

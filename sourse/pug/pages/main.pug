@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+
+block title
+	title Главная
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+
+	+header-block()
+	+s-our-directions
+	+s-news
+	+s-seo-block
+	+s-logos
+	//- +s-form()
+	+s-contact()
+	+footer()
+

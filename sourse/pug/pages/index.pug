@@ -3,18 +3,105 @@ extends layout/main.pug
 
 include ../blocks/s-content/_s-content.pug
 include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
 
 block title
-	title title
+	title Главная
 
 block pagecontent
-	+mob-mnu()
-	+header()
-		+top-line()
+	+header() 
 		+top-nav()
+	.section.site-map
+		.bg-white.section.container 
+			ol.pl-4.ttu.strong
+				li.mb-2
+					a(href="main.html") Главная
+				
+				li.mb-2
+					a(href="02-news.html") НОВОСТИ
+					ol.pl-4
+						li.mb-2
+							a(href="03-news-page.html") новость
+						
+				li.mb-2
+					a(href="04-treners.html") ТРЕНЕРА
+				
+				li.mb-2
+					a(href="05-contacts.html") Контакты
+				
+				li.mb-2
+					a(href="06-sponsors.html") СПОНСОРАМ
+				
+				li.mb-2
+					a(href="07-about.html") О нас
+				
+				li.mb-2
+					a(href="08-sportman.html") Спорстмены
+					ol
+						li.mb-2
+							a(href="09-sportman-page.html") Спорстмен
+							//- 11
+				
+				li.mb-2
+					a(href="10-tournaments.html") Турниры академии
+				
+					ol
+						li.mb-2
+							a(href="10-tournaments-1.html") Международные турниры 
+						
+						li.mb-2
+							a(href="10-tournaments-2.html") Международные турниры 2
+							//- 13
+						
+						 
+						
+						li.mb-2
+							a(href="11-tournament.html") Страница трунира
+						
+							//- 16
+				li.mb-2
+					a(href="12-master-class.html") Мастер класс
+				
+				li.mb-2
+					a(href="13-academy.html")  академия
+					//- 18
+				
+					ol
+						li.mb-2
+							a(href="14-gal.html")  Галерея 
+							//- 19
+					
+							ol
+								li.mb-2
+									a(href="14-gal-1.html") Фото тренерского состава
+									//- 20
+							
+				li.mb-2
+					a(href="15-video.html") Оценка по видео
+					//- 21
+				
+				li.mb-2
+					a(href="15-video-1.html") Оценка по видео - оплата
+					//- 22
+				
+				li.mb-2
+					a(href="16-programs.html") Тренировочные программы
+					//- 23
+					ol
+						li.mb-2
+							a(href="17-program.html") название программы
+							//- 24
+				
+				li.mb-2
+					a(href="18-doc.html") Документы
+					//- 25
+				
+				
+				
+				
+	+footer() 
 
-	+header-block()
-	+s-form()
-	+s-contact()
-	+footer()
-
+						

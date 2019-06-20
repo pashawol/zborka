@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-treners/_s-treners.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-gal/_s-gal.pug
+
+block title
+	title Фото тренерского состава
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1 Фото тренерского состава
+		+breadcrumb("Главная","О школе","Галерея",'Фото тренерского состава') 
+	+s-content2()
+		.text-center 
+			p Предшественником тенниса принято считать французскую игру «жё-де-пом» (фр. jeu de paume, дословно игра ладонью). В отличие от современного тенниса в жё-де-пом играли в закрытых помещениях и ладонью. Позже ладонь сменили перчатки, на смену перчаткам пришли специальные биты, а уже потом появились ракетки. Одним из наиболее известных упоминаний тенниса в средневековой литературе является эпизод в исторической хронике Шекспира «Генрих V», где французский дофин в насмешку присылает молодому английскому королю бочонок теннисных мячей. В теннис играли практически все французские короли, Карл IX называл теннис “ одним из самых благородных, достойных и полезных для здоровья упражнений, которыми могут заниматься принцы, пэры и другие знатные особы”.    
+		+s-gal-14-1
+	+s-banner
+	+footer()
+

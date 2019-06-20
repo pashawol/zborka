@@ -1,19 +1,55 @@
 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
+	+b.menu-mobile--js#my-menu
 		+e.inner
-		
-			+mnu()
-			.text-right
+			
+			+e.title меню сайта
+			- var nav= { "Семинары и мастер-классы":"#","Оценка по видео":"#","Тренировочные программы":"#","Фан-клуб":"#","Новости":"#","О школе":"#","Спонсорам":"#","Контакты":"#"}
+				+e.UL.nav
+					+e.LI.item--current
+						+e.A.link(href="#") Турниры академии
+						+b.UL.sub-nav
+							+e.A.link(href="#") Международные турниры
+							+e.A.link(href="#") Корпоративные турниры
+							+e.A.link(href="#") Выходного дня
+					each linkPatch, linkName in nav
+						+e.LI.item
+							+e.A.link(href= linkPatch)= linkName
+							+b.UL.sub-nav
+								+e.A.link(href="#") Международные турниры
+								+e.A.link(href="#") Корпоративные турниры
+								+e.A.link(href="#") Выходного дня
+			.d-lg-none
+				+mnu()
+			+e.foot
+				+soc
+					+e.text.d-none.d-sm-block — мы в скоциальных сетях
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			.row
+				.col-auto
+					+b.toggle-menu-mobile--js
+						span
+						+e.DIV.text МЕНЮ
+				+e.col-logo.col-lg-auto.col
+					+e.logo(href="#")
+						img(src="img/logo.png", alt="")
+						+e.text.d-none.d-sm-block
+							strong Национальная академия тенниса Беларуси  
+							small 40&nbsp;ЛЕТ УСПЕХА
+				
+				+e.col-nav.col.d-none.d-lg-block
+					
+						+mnu()
+				
+				.col-auto
+					+e.UL.nav--lang
+						+e.LI.item: +e.A.link--lang-active.--lang(href="#") ENG
+						+e.LI.item: +e.A.link--lang(href="#") RUS
+				.col-auto.d-sm-none.d-md-block
+					+soc
 					
 	// end top-nav

@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-treners/_s-treners.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-events/_s-events.pug
+
+block title
+	title  Международные турниры
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1  Международные турниры
+		+breadcrumb("Главная","Спорстмены", " Международные турниры")
+	//- +s-category-10
+	.container
+		+s-nav(  'Архив ', "Анонсированные", "1995","1996","1997 ","1998","1999 ","2000")(class="section-nav__body--shirt")
+	+s-events-10-1
+	+s-news-4
+		h3 ПОСЛЕДНИЕ НОВОСТИ
+		
+	+s-banner
+	+footer()
+

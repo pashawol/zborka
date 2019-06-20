@@ -1,5 +1,6 @@
 .header{
-	
+  position: relative;
+  z-index: 900;
   // 
   @include media-breakpoint-up(xl) {}
 

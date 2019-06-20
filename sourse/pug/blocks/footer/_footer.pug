@@ -1,4 +1,41 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			- var nav= {"Турниры академии":"#","Оценка по видео":"#","Новости":"#","академия":"#","Спонсорам":"#","Контакты":"#"}
+				+e.UL.nav.d-none.d-lg-flex
+					each linkPatch, linkName in nav
+						+e.LI.item: +e.A.link(href= linkPatch)= linkName
+			+e.row.row.justify-content-center
+				.col-xl.col-auto
+					+e.logo-block
+						.row
+							.col
+								img.res-i.lazy(src="#" data-src="img/logo.png", alt="")
+							.col-auto ©2019 Национальная академия тенниса РБ
+								br
+								| ВСЕ ПРАВА ЗАЩИЩЕНЫ
+								.row
+									.col-left.col-auto
+										a.text-body.tdu(href="#") Войти на сайт
+									
+									.col-auto
+										a.text-body.tdu(href="#") Документы
+									
+				.col-auto
+					+soc
+				.col-auto
+					+e.patner.row
+						.col-auto
+							a(href="#")
+								img.lazy(src="#" data-src="img/footer-patner-1.svg", alt="")
+						
+						.col-auto
+							a(href="#")
+								img.lazy(src="#" data-src="img/footer-patner-2.svg", alt="")
+						.col-auto —   наши партнеры
+				.text-center.col-auto 
+					+e.develop(href="#") Разработка сайта    
+						|
+						img.lazy(src="#" data-src="img/farba-logo.svg", alt="")
+						| Farba Studio
+					

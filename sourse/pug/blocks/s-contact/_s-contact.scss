@@ -1,4 +1,130 @@
 .s-contact {
+	+ .footer{
+		margin-top: rem(40);
+	}
+	&.section{
+
+		padding-top: rem(47);
+		// padding-bottom: rem(54);
+	}
+	
+	&__block{
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+		background-color: #ffffff;
+		min-height: 100%;
+		@include media-breakpoint-up(xl) { 
+			padding-right: rem(56);
+			padding-top: rem(50);
+		}
+		padding-top: rem(60);
+		@include media-breakpoint-up(lg) {
+			
+			// padding-left: rem(26);
+			// padding-right: rem(26);
+			// padding-left: rem(56); 
+		}
+		@include media-breakpoint-up(md) {
+			
+		}
+		
+		padding-left: rem(15);
+		padding-right: rem(15);
+		padding-bottom: rem(30);
+	}
+	&__left-col-block{
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		
+		margin-bottom: rem(20);
+	}
+	.form-wrap{
+		@include media-breakpoint-up(xl) { 
+			padding-left: rem(100);
+			padding-right: rem(56);
+			padding-bottom: rem(60);
+			padding-top: rem(50);
+			&--lg{
+				padding-left: rem(56);
+
+			}
+		}
+		padding-top: rem(60);
+		@include media-breakpoint-up(lg) {
+			
+			padding-left: rem(80);
+			&--lg{
+				padding-left: rem(26);
+
+			}
+		}
+		@include media-breakpoint-up(md) {
+			
+			padding-left: rem(26);
+			padding-right: rem(26);
+						}
+
+		padding-left: rem(15);
+		padding-right: rem(15);
+		padding-bottom: rem(30);
+	}
+	&__map-wrap{
+		position: relative;
+		min-height: 300px;
+		&--page{
+			margin-top: rem(60);
+		}
+		@include media-breakpoint-up(lg) {
+			height: 100%;
+			&--page{
+				height: rem(600);
+			}
+			margin-bottom: 0;
+		}
+		margin-bottom: 20px;
+		> ymaps{
+			left: 0;
+			top: 0;
+			width: 100% !important;
+			height: 100% !important;
+			position: absolute;
+		}
+	}
+	&__group-title{
+		@include rfs(26);
+		@extend .mono;
+		text-transform: uppercase;
+		color: $primary;
+	}
+	&__row{
+		margin-bottom: 2rem;
+	}
+	&__col-title{
+		display: flex;
+		align-items: center;
+	}
+	&__icon-wrap{
+		width: rem(39px);
+		height: rem(39px);
+		background-color: $primary;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: rem(17);
+		.icon{
+			color: #ffffff;
+			font-size: rem(13);
+		}
+	}
+
+	// &__col-title{
+	// 	@include media-breakpoint-up(sm) {
+
+	// 		margin-bottom: 0;
+	// 	}
+	// 	margin-bottom: rem(15);
+	// }
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

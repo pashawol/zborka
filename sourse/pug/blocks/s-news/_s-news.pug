@@ -1,0 +1,177 @@
+mixin s-news()
+	// start s-news
+	+b.SECTION.s-news.section.block-with-lazy#s-news
+		.container
+			+b.section-title.text-center
+				h2 НОВОСТИ
+				
+			+e.row.row
+				mixin item(i, a)
+					+e.col--lg.col-lg-4.col-sm-6&attributes(attributes)
+						+e.item
+							+e.img-wrap.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/news-${i}.jpg`, alt="")
+							+e.caption
+								+e.title
+									a(href="#") Сирота, ставший чемпионом. История теннисиста Ласло Джере
+								p Международный турнир ATP 500 Series в Гамбурге с 2019 года будет называться «Hamburg Open European...
+									block
+								+e.foot.row
+									.col-auto
+										+e.date 10 сентября’19
+									.col-auto
+										+e.foot-link(href="#")= a
+					// /.col-4
+
+				+item('1','Турниры') 
+				+item('3','Мастер-класс')
+				.col-lg-4
+					.row
+						+e.col.col-lg-12.col-sm-6
+							+e.img-wrap.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/news-2.jpg`, alt="")
+								+e.DIV.img-text 
+									+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+									+e.DIV.date 10 сентября’19
+						
+						+e.col.col-lg-12.col-sm-6
+							+e.img-wrap.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+								+e.DIV.img-text 
+									+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+									+e.DIV.date 10 сентября’19
+				// /.col-4
+			.text-center
+				a.link-more(href="#") ВСЕ НОВОСТИ
+	// end s-news 
+mixin s-news-2()
+	// start s-news
+	+b.SECTION.s-news.section.section--md.pt-0.block-with-lazy
+		.container 
+			+s-nav('Еще', 'Все новости','Турниры','Академия','Мероприятия',' Фанк клуб',' Мероприятия','Академия','Мероприятия',' Фанк клуб',' Мероприятия','Мероприятия',' Фанк клуб',' Мероприятия','Мероприятия',' Фанк клуб',' Мероприятия','Мероприятия' ) 
+			mixin item(i, a)
+				 
+				+e.item--page
+					.row
+						.col-md-6.order-md-last
+							+e.img-wrap--page.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/new-page-${i}.jpg`, alt="")
+						.col
+							+e.caption--page
+								+e.title--page
+									a(href="#") Сирота, ставший чемпионом. История теннисиста Ласло Джере
+								+e.foot--page.row
+									.col-auto
+										+e.date 10 сентября’19
+									.col-auto
+										+e.foot-link(href="#")= a
+								p Прямым предшественником современного тенниса считается игра в помещениях, до конца XIX века носившая то же название, а в настоящее время известная как реал-теннис, корт-теннис или жё-де-пом (фр. jeu de paume, в буквальном переводе игра ладонью). 
+									block
+								+e.btn(href="#")  Читать далее
+									//- +icon('')
+						//- // /.col-4
+				// /+e.item
+			- for (var x = 0; x < 4; x++)
+				+item('1','Турниры') 
+				+item('2','Мастер-класс') 
+			+b.btn-more(href="#") БОЛЬШЕ НОВОСТЕЙ
+			+pugin()
+	// end s-news 
+
+
+
+mixin s-news-3()
+	// start s-news
+	+b.SECTION.s-news.section.block-with-lazy#s-news
+		.container
+			+b.section-title.text-center
+				h3 ПОСЛЕДНИЕ НОВОСТИ
+				
+			+e.row.row 
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19 
+				
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-2.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19
+				
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19  
+	// end s-news 
+	
+	// start s-news
+	+b.SECTION.s-news.section.block-with-lazy#s-news
+		.container
+			+b.section-title.text-center
+				
+				h3 ПОХОЖИЕ НОВОСТИ
+				
+			+e.row.row 
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19 
+				
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-2.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19
+				
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19 
+				
+			.text-center
+				a.link-more(href="#") ВСЕ НОВОСТИ
+	// end s-news 
+
+
+mixin s-news-4()
+	// start s-news
+	+b.SECTION.s-news.section.block-with-lazy#s-news
+		.container
+			+b.section-title.text-center
+				block
+				
+			+e.row.row 
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19 
+				
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-2.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19
+				
+				+e.col.col-lg-4.col-md-6
+					+e.img-wrap.img-bg(href="#")
+						img.lazy-bg(src="#" data-src=`img/news-4.jpg`, alt="")
+						+e.DIV.img-text 
+							+e.DIV.img-title Сирота, ставший чемпионом. История теннисиста Ласло Джере
+							+e.DIV.date 10 сентября’19  
+			.text-center
+				a.link-more(href="#") ВСЕ НОВОСТИ
+	// end s-news 

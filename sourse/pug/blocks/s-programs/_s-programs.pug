@@ -1,0 +1,26 @@
+mixin s-programs()
+	// start s-programs
+	+b.s-programs.block-with-lazy#s-programs&attributes(attributes)
+		.container
+			+e.slider--js
+				mixin sl(i,t)
+					+e.slide
+						+e.item
+							+e.img-wrap.img-bg(href="#")
+								img.lazy-bg(src="#" data-src=`img/prog-${i}.jpg`, alt="")
+								+e.label текущий
+							+e.caption
+								+e.title.h4.strong
+									a(href="#")= t 
+								p Теннисный матч состоит из «сетов», а они в свою очередь из «геймов», для выигрыша которых необходимо забивать мячи (минимум 4 мяча: 15-30-40-гейм, но с разницей не менее, чем два мяча). При подаче у игрока есть две попытки, в которые он попеременно подает мяч в левый и правый квадраты. После розыгрыша гейма подача переходит к сопернику. 
+ 
+								+e.foot.row
+									.col
+										.h4.strong 20 руб.
+									.col-lg-auto
+										+e.btn(href="#") зарегистрироваться
+					// /+e.slide
+				+sl('1','Название тренировочной программы ')
+				+sl('2','Название тренировочной программы в одну строку ')
+				+sl('2','Название тренировочной программы в одну строку ')
+	// end s-programs

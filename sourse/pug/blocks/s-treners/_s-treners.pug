@@ -1,0 +1,54 @@
+mixin s-treners()
+	mixin item(i)
+		+e.col&attributes(attributes)
+			+e.item
+				+e.img-wrap.img-bg
+					img.lazy-bg(src="#" data-src=`img/treners-${i}.jpg`, alt="")
+				+e.title Иванов Иван Иванович
+				+e.text  Заслуженные тренер
+		// /+e.col
+	// start s-treners
+	+b.SECTION.s-treners.section.block-with-lazy
+		.container
+			+b.section-title.text-center
+				h3 ОСНОВНОЙ ТРЕНЕРСКИЙ СОСТАВ
+				
+			.row
+				- for (var x = 1; x < 4; x++)
+					+item(x)(class="col-12 col-lg-4 col-sm-6 col-large")
+	
+	+b.SECTION.s-treners.section.block-with-lazy
+		.container
+			+b.section-title.text-center
+				h3 НЕ ОСНОВНОЙ ТРЕНЕРСКИЙ СОСТАВ
+				
+			.row
+				- for (var x = 4; x < 12; x++)
+					+item(x)(class="col-12 col-lg-3 col-md-4 col-sm-6 ")
+
+	// end s-treners
+mixin s-treners-12()
+	mixin item(i)
+		+e.col&attributes(attributes)
+			+e.item
+				+e.img-wrap.img-bg
+					img.lazy-bg(src="#" data-src=`img/treners-${i}.jpg`, alt="")
+					+e.caption
+						
+						+e.title Иванов Иван Иванович
+						+e.text  Заслуженные тренер
+		// /+e.col
+	// start s-treners
+	+b.SECTION.s-treners.section.block-with-lazy
+		.container
+			+b.section-title.text-center
+				h3 нашы тренеры
+				
+			+e.slider--js
+				- for (var x = 1; x < 4; x++)
+					+item(x)()
+				
+				- for (var x = 1; x < 2; x++)
+					+item(x)()
+				
+	// end s-treners

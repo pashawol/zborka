@@ -1,0 +1,96 @@
+mixin s-event-head(t)
+	// start s-event-head
+	+b.s-event-head.block-with-lazy#s-event-head&attributes(attributes) 
+		.row
+			+e.col.col-md-auto
+				+e.img-wrap.img-bg
+					img.lazy-bg(src="#" data-src=`img/event-1.jpg`, alt="")
+					+e.label Текущий
+				+e.contacts.d-none.d-md-block
+					+e.contacts-title Контактная информация:
+					+e.contacts-item
+						+e.icon-wrap: +icon('user2')
+						| Макаревич Иван Александрович
+					
+					+e.contacts-item
+						+e.icon-wrap: +icon('tel')
+						a.text-body(href="tel:+37529123-23-23") +375 29 123-23-23
+					
+					+e.contacts-item
+						+e.icon-wrap: +icon('email')
+						a.tdu(href="mailto:playhockey@mail.by") playhockey@mail.by 
+					+soc4()
+			.col
+				+e.title= t
+				+e.date Дата проведения: 23.03.2019
+				+e.table-block
+					.row
+						mixin tr(t1, t2)
+							.row.tr
+								.col.td.strong= t1
+								.col-auto.td= t2
+						.col-lg-6
+							.table
+								+tr("Окончание регистрации:","16.04.2019")
+								+tr("Участники турнира:","мальчики и девочки")
+								+tr("Возрастная категория:","до 18 лет")
+								+tr("Взнос:","35 руб.")
+								+tr("Место проведения:","г. Минск, ул. Садовая 45")
+						.col-lg-6
+							.table 
+								+tr("Количество мест:","36")
+								+tr("Свободных мест:","12")
+								+tr("Тип кортов:","Крытый")
+								+tr("Главный судья:","Иванов Иван")
+								+tr("Судьи:","Иванов И., Макаревич И., Степовов А.")
+				+e.body
+					p В турнире могут принять участие дети 5 - 8 лет включительно в категории "до 8 лет" красные мячи, 7 - 9 лет включительно в категории "до 9 лет" оранжевые мячи, 8 - 10 лет включительно в категории "до 10 лет" оранжевые мячи.
+
+					p Жеребевка состоится в пятницу 11.01.19г. в 14.00. Приглашаем представителей!
+					
+					p Начало игр в 08.00 ( оранженые мячи согласно расписанию). Игры на красных мячах начнуться в 09.00 (без расписания ) для детей до 8 лет (включительно). Возраст до 10 лет ( зеленые мячи ) играют после 13.00 ( будет в расписании).
+						br
+						| Участникам турнира будет предоставлена вода, фрукты, печенье. 
+
+					p: strong  Победители будут награждены Кубками, медалями, дипломами и памятными призами от WILSON! 
+
+					p: strong   Лучшие по результатам серии будут награждены суперпризами от "WILSON" - теннисной ракеткой!!
+
+					p: strong
+						| Суперприз достанется одному мальчику и одной девочке  в каждой возрастной категории. 
+						br
+						| Итого по итогам серии будут вручены 6 ракеток!!!
+					
+					block
+		+e.contacts.d-md-none
+			+e.contacts-title Контактная информация:
+			+e.contacts-item
+				+e.icon-wrap: +icon('user2')
+				| Макаревич Иван Александрович
+			
+			+e.contacts-item
+				+e.icon-wrap: +icon('tel')
+				a.text-body(href="tel:+37529123-23-23") +375 29 123-23-23
+			
+			+e.contacts-item
+				+e.icon-wrap: +icon('email')
+				a.tdu(href="mailto:playhockey@mail.by") playhockey@mail.by 
+			+soc4()
+		+e.foot
+			.row
+				.col
+					.row
+						.col-lg-auto.fw-900.my-2 При поддержке:
+						.col-auto
+							+e.logo-wrap
+								img.lazy(src="#" data-src=`img/logo-sm-1.png`, alt="")
+						.col-auto
+							+e.logo-wrap
+								img.lazy(src="#" data-src=`img/logo-sm-2.png`, alt="")
+						
+						.col-auto
+							+e.logo-wrap
+								img.lazy(src="#" data-src=`img/logo-sm-3.png`, alt="")
+				.col-md-auto
+					+e.btn(href='#') Принять участие
+	// end s-event-head

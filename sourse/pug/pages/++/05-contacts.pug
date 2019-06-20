@@ -1,0 +1,26 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-our-directions/_s-our-directions.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-seo-block/_s-seo-block.pug
+include ../blocks/s-banner/_s-banner.pug
+include ../blocks/s-treners/_s-treners.pug
+include ../blocks/s-category/_s-category.pug
+
+block title
+	title Контакты
+
+block pagecontent
+	
+	+header() 
+		+top-nav()
+	.page-head.container
+		h1 Контакты
+		+breadcrumb("Главная","Контакты") 
+	+s-contact-05()
+	+footer()
+
